@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ONBOARDING_KEY = 'funtechx:onboarding_completed';
+const ONBOARDING_KEY = 'fintechx:onboarding_completed';
 
 export function useOnboarding() {
   const [completed, setCompleted] = useState(() => localStorage.getItem(ONBOARDING_KEY) === 'true');
