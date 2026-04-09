@@ -8,7 +8,7 @@ export function ChatInstructions() {
           key={instruction}
           className="bg-background-secondary rounded-2xl p-4 flex items-center justify-center"
         >
-          <p className="text-center w-2/3 text-text-tertiary text-[15px] leading-normal">
+          <p className="text-center w-2/3 text-text-tertiary text-[15px] leading-relaxed">
             {instruction}
           </p>
         </div>
