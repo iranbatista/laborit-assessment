@@ -1,15 +1,9 @@
-import { useState } from 'react';
 import { OnboardingScreen } from './screens/OnboardingScreen';
 import { ChatScreen } from './screens/ChatScreen';
-
-type Screen = 'onboarding' | 'chat';
+import { useOnboarding } from './hooks/useOnboarding';
 
 export function App() {
-  const [screen, setScreen] = useState<Screen>('onboarding');
+  const { completed, completeOnboarding } = useOnboarding();
 
-  return screen === 'onboarding' ? (
-    <OnboardingScreen onFinish={() => setScreen('chat')} />
-  ) : (
-    <ChatScreen />
-  );
+  return completed ? <ChatScreen /> : <OnboardingScreen onFinish={completeOnboarding} />;
 }
