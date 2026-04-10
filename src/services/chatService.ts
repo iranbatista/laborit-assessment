@@ -18,5 +18,5 @@ export async function sendMessage(messages: Message[]): Promise<string> {
   const lastMessage = messages[messages.length - 1].message;
   const result = await chat.sendMessage({ message: lastMessage });
 
-  return result.text;
+  return result.text ?? '';
 }
