@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CheckIcon, CopyIcon } from 'lucide-react';
 import aiImage from '../../assets/ai.png';
 import { RegenerateButton } from './RegenerateButton';
+import { parseLinks } from '../../utils/parseLinks';
 
 interface Props {
   message: string;
@@ -38,7 +39,7 @@ export function ChatAIMessage({ message, lastMessage, loading, onRegenerate }: P
             </button>
           </div>
         </header>
-        <p className="text-sm text-text-tertiary leading-relaxed pt-4">{message}</p>
+        <p className="text-sm text-text-tertiary leading-relaxed pt-4">{parseLinks(message)}</p>
       </div>
       {lastMessage && <RegenerateButton onRegenerate={onRegenerate} disabled={loading} />}
     </>
