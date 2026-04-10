@@ -32,6 +32,8 @@ Aplicação web responsiva com fluxo de onboarding → chat vazio com apresenta�
 
 O assistente usa o modelo `gemini-2.5-flash-lite` via SDK oficial do Google. O histórico completo da conversa é enviado a cada requisição, mantendo o contexto. O comportamento é controlado por um `systemInstruction` que define a persona da FinTechX, produtos, canais, políticas de segurança e regras como responder sempre em português e nunca inventar informações.
 
+> **Nota sobre segurança:** por se tratar de um assessment, a chamada à API do Gemini é feita diretamente no cliente, com a chave protegida apenas por variável de ambiente. Entendo que em uma aplicação de produção, a abordagem correta seria utilizar um endpoint de backend que faça a chamada à API server-side, mantendo a chave completamente segura.
+
 ---
 
 ## Funcionalidades
