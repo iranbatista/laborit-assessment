@@ -10,4 +10,16 @@
   --color-text-tertiary: #8e9295;
 
   --font-poppins: 'Poppins', sans-serif;
+
+  --animate-typing: typing 0.8s ease-in-out infinite;
+
+  @keyframes typing {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
 }
