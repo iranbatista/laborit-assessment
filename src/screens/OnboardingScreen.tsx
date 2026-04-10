@@ -7,21 +7,25 @@ interface Props {
 
 export function OnboardingScreen({ onFinish }: Props) {
   return (
-    <div className="flex flex-col items-center w-full max-w-md m-auto px-5">
+    <div className="flex flex-col items-center w-full max-w-md m-auto px-5 h-dvh py-10">
       <button
         type="button"
         onClick={onFinish}
-        className="font-semibold text-text-secondary text-lg mt-10 self-end cursor-pointer hover:brightness-110 transition-all"
+        className="font-semibold text-text-secondary text-lg self-end cursor-pointer hover:brightness-110 transition-all"
       >
         Pular
       </button>
 
-      <div className="relative mt-5">
-        <img src={robotImage} alt="Robot image" className="h-110 rounded-4xl object-cover" />
+      <div className="relative mt-5 flex-1 min-h-0 w-full flex items-end justify-center">
         <img
           src={robotImage}
           alt="Robot image"
-          className="h-103 rounded-4xl object-cover blur-[35px] absolute top-10 -z-1"
+          className="h-full max-h-full rounded-4xl object-cover"
+        />
+        <img
+          src={robotImage}
+          alt="Robot image blurred"
+          className="h-[95%] rounded-4xl object-cover blur-[35px] absolute top-10 -z-1"
         />
       </div>
 

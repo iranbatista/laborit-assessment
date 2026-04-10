@@ -26,10 +26,16 @@ export function OnboardingSlide({ onFinish }: Props) {
       </div>
 
       <div className="mt-4 max-w-3/4">
-        <h1 className="font-bold text-white text-4xl text-center leading-normal">
+        <h1
+          className="font-bold text-white text-4xl text-center leading-normal text-balance"
+          style={{ fontSize: 'clamp(1.875rem, 7vw, 2.25rem)' }}
+        >
           {onboardingSlides[currentSlide].title}
         </h1>
-        <p className="font-light text-text-tertiary text-center mt-1">
+        <p
+          className="font-light text-text-tertiary text-center mt-1 text-balance"
+          style={{ fontSize: 'clamp(0.875rem, 3.5vw, 1rem)' }}
+        >
           {onboardingSlides[currentSlide].subtitle}
         </p>
       </div>
